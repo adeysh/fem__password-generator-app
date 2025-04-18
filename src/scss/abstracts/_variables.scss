@@ -1,0 +1,68 @@
+:root {
+    // Colors
+
+    // neutral
+    --grey-950: hsl(255, 22%, 4%);
+    --grey-900: hsl(248, 17%, 9%);
+    --grey-850: hsl(248, 15%, 11%);
+    --grey-800: hsl(247, 11%, 15%);
+    --grey-700: hsl(248, 5%, 34%);
+    --grey-600: hsl(251, 9%, 53%);
+    --grey-200: hsl(252, 11%, 91%);
+
+    // primary
+    --green-200: hsl(127, 100%, 82%);
+    --yellow-300: hsl(42, 91%, 68%);
+    --orange-400: hsl(13, 95%, 66%);
+    --red-500: hsl(0, 91%, 63%);
+
+    // gradients
+    --gradient-1: linear-gradient(90deg, var(--grey-900) 0%, var(--grey-950) 100%);
+
+    // naming colors
+    --Cinder: var(--grey-950);
+    --Cinder-light: var(--grey-900);
+    --Baltic-Sea: var(--grey-850);
+    --Baltic-Sea-light: var(--grey-800);
+    --Scarpa-Flow: var(--grey-700);
+    --Topaz: var(--grey-600);
+    --Mischka: var(--grey-200);
+    --Mint-Green: var(--green-200);
+    --Cream-Can: var(--yellow-300);
+    --Coral: var(--orange-400);
+    --Carnation: var(--red-500);
+    --gradient-cinder: var(--gradient-1);
+
+    // Fonts
+    /* jetbrains-mono-regular - latin */
+    @font-face {
+        font-display: swap;
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/assets/fonts/jetbrains-mono/jetbrains-mono-v20-latin-regular.woff2') format('woff2');
+    }
+
+    /* jetbrains-mono-700 - latin */
+    @font-face {
+        font-display: swap;
+        font-family: 'JetBrains Mono';
+        font-style: normal;
+        font-weight: 700;
+        src: url('/assets/fonts/jetbrains-mono/jetbrains-mono-v20-latin-700.woff2') format('woff2');
+    }
+
+    /* jetbrains-mono-700italic - latin */
+    @font-face {
+        font-display: swap;
+        font-family: 'JetBrains Mono';
+        font-style: italic;
+        font-weight: 700;
+        src: url('/assets/fonts/jetbrains-mono/jetbrains-mono-v20-latin-700italic.woff2') format('woff2');
+    }
+
+    --ff-primary: "JetBrains Mono",
+    "sans-serif";
+
+    --fw-bold: 700;
+}
