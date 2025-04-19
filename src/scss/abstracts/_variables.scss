@@ -1,3 +1,6 @@
+@use './functions' as *;
+
+
 :root {
     // Colors
 
@@ -17,7 +20,7 @@
     --red-500: hsl(0, 91%, 63%);
 
     // gradients
-    --gradient-1: linear-gradient(90deg, var(--grey-900) 0%, var(--grey-950) 100%);
+    --gradient-1: linear-gradient(var(--grey-850) 0%, var(--grey-950) 100%);
 
     // naming colors
     --Cinder: var(--grey-950);
@@ -34,6 +37,27 @@
     --gradient-cinder: var(--gradient-1);
 
     // Fonts
+    --ff-primary: "JetBrains Mono",
+        "sans-serif";
+
+    --fw-bold: 700;
+
+    // font-sizes
+
+    --fs-body: #{rem(16)};
+    --fs-small: #{rem(12)};
+    --fs-medium: #{rem(20)};
+    --fs-large: #{rem(28)};
+
+    // gap
+
+    --gap-calculator: clamp(1rem, 0.7974683544303798rem + 1.0126582278481013vw, 1.5rem);
+
+    // borders
+
+    --mint-green-border: #{rem(2) solid var(--Mint-Green)};
+    --mischka-border: #{rem(2) solid var(--Mischka)};
+
     /* jetbrains-mono-regular - latin */
     @font-face {
         font-display: swap;
@@ -61,8 +85,4 @@
         src: url('/assets/fonts/jetbrains-mono/jetbrains-mono-v20-latin-700italic.woff2') format('woff2');
     }
 
-    --ff-primary: "JetBrains Mono",
-    "sans-serif";
-
-    --fw-bold: 700;
 }

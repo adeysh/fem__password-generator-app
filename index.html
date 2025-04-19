@@ -25,9 +25,9 @@
 </head>
 
 <body>
-    <main class="password-generator">
+    <main class="password-generator wrapper">
         <h1 class="password-generator__title">Password Generator</h1>
-        <section class="password-generator__display-container">
+        <section class="password-generator__display-container container">
             <p class="password-generator__password-text">Exrdg09</p>
             <div class="password-generator__copy-btn">
                 <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg" class="password-generator__copy-btn-img">
@@ -37,7 +37,7 @@
                 </svg>
             </div>
         </section>
-        <form class="password-generator__generator-form">
+        <form class="password-generator__generator-form container">
             <section class="password-generator__length-config">
                 <div class="password-generator__length-config-header">
                     <label for="config-slider" class="password-generator__length-config-label">
@@ -50,50 +50,50 @@
                 <input type="range" name="config-slider" id="config-slider"
                     class="password-generator__length-config-slider" min="1" max="20" value="10">
             </section>
-            <fieldset class="passsword-generator__options">
+            <fieldset class="password-generator__options">
                 <legend class="visually-hidden">Password Character Options</legend>
-                <label class="passsword-generator__options-item">
+                <label class="password-generator__options-item">
                     <input type="checkbox" class="password-generator__options-checkbox" name="option-uppercase"
                         id="option-uppercase">
-                    "Include Uppercase Letters"
+                    Include Uppercase Letters
                 </label>
-                <label class="passsword-generator__options-item">
+                <label class="password-generator__options-item">
                     <input type="checkbox" class="password-generator__options-checkbox" name="option-lowercase"
                         id="option-lowercase">
-                    "Include Lowercase Letters"
+                    Include Lowercase Letters
                 </label>
-                <label class="passsword-generator__options-item">
+                <label class="password-generator__options-item">
                     <input type="checkbox" class="password-generator__options-checkbox" name="option-numbers"
                         id="option-numbers">
-                    "Include Numbers"
+                    Include Numbers
                 </label>
-                <label class="passsword-generator__options-item">
+                <label class="password-generator__options-item">
                     <input type="checkbox" class="password-generator__options-checkbox" name="option-symbols"
                         id="option-symbols">
-                    "Include Symbols"
+                    Include Symbols
                 </label>
             </fieldset>
-            <section class="password-generator__strength-config">
-                <p class="password-generator__strength-label">
+            <section class="password-generator__strength-config container container--dark">
+                <p class="password-generator__strength-config-label">
                     Strength
                 </p>
-                <div class="password-generator__strength-meter">
-                    <p class="password-generator__strength-value">
+                <div class="password-generator__strength-config-meter">
+                    <p class="password-generator__strength-config-value">
                         Weak
                     </p>
-                    <div class="password-generator__strength-indicator">
-                        <div class="password-generator__strength-bar"></div>
-                        <div class="password-generator__strength-bar"></div>
-                        <div class="password-generator__strength-bar"></div>
-                        <div class="password-generator__strength-bar"></div>
+                    <div class="password-generator__strength-config-indicator">
+                        <div class="password-generator__strength-config-bar"></div>
+                        <div class="password-generator__strength-config-bar"></div>
+                        <div class="password-generator__strength-config-bar"></div>
+                        <div class="password-generator__strength-config-bar"></div>
                     </div>
                 </div>
             </section>
             <button type="submit" class="password-generator__generate-btn">
                 Generate
-                <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                <svg width="12" height="12" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                     class="password-generator__generate-btn-img">
-                    <path fill="#24232C" d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+                    <path d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
                 </svg>
             </button>
         </form>

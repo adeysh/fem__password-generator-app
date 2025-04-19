@@ -2,4 +2,19 @@
 
 body {
     font-family: var(--ff-primary);
+    background: var(--gradient-cinder);
+    color: white;
+    min-height: 100vh;
+    @include a.flexbox($direction: column, $justify: center);
+    font-size: var(--fs-body);
+}
+
+fieldset {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+}
+
+legend {
+    display: none;
 }
