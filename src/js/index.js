@@ -1,3 +1,3 @@
-import { sayHello } from './events';
+import { setupEventListeners } from './ui-events';
 
-sayHello();
+setupEventListeners();
