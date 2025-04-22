@@ -20,12 +20,19 @@ export const copyToClipboard = () => {
 };
 
 export const updateGenerateButtonState = () => {
-    // console.log(calculateStrength());
     if (calculateStrength() > 0) return (generateButton.disabled = false);
     generateButton.disabled = true;
 };
 
 export const updateCopyButtonState = () => {
-    console.log("copy button");
+    disableCopyButton();
+};
+
+export const disableCopyButton = () => {
     copyButton.disabled = true;
-}
+};
+
+export const enableCopyButton = () => {
+    copyButton.disabled = false;
+};
+

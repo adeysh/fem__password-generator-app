@@ -3,23 +3,21 @@ import { updateSliderBackground, updateLengthValue, copyToClipboard, updateGener
 import { handlePasswordGeneration } from './password-generator';
 import { calculateStrength, updateStrengthBars } from './password-strength';
 
+const updateUI = () => {
+    setLengthValue(slider.value);
+    updateSliderBackground(slider);
+    updateLengthValue(slider);
+    updateStrengthBars(calculateStrength());
+    updateGenerateButtonState();
+}
+
 export const setupEventListeners = () => {
     window.addEventListener("load", () => {
-        setLengthValue(slider.value);
-        updateSliderBackground(slider);
-        updateLengthValue(slider);
-        updateStrengthBars(calculateStrength());
-        updateGenerateButtonState();
+        updateUI();
         updateCopyButtonState();
     });
 
-    slider.addEventListener("input", () => {
-        setLengthValue(slider.value);
-        updateSliderBackground(slider);
-        updateLengthValue(slider);
-        updateStrengthBars(calculateStrength());
-        updateGenerateButtonState();
-    });
+    slider.addEventListener("input", updateUI);
 
     checkboxOptions.forEach((option) => {
         option.addEventListener("change", () => {
@@ -28,7 +26,7 @@ export const setupEventListeners = () => {
         })
     });
 
-    form.addEventListener("submit", (e) => e.preventDefault());
+    form.addEventListener("submit", e => e.preventDefault());
     generateButton.addEventListener("click", handlePasswordGeneration);
     copyButton.addEventListener("click", copyToClipboard);
 }

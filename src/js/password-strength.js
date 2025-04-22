@@ -32,15 +32,13 @@ export const calculateStrength = () => {
     setStrengthValue(checkboxOptions.filter((input) => input.checked).length);
     if (lengthValue < 12) return strengthValue - 1;
     if (lengthValue > 16 && strengthValue > 0) return strengthValue + 1;
-    console.log(lengthValue, strengthValue);
+
     return strengthValue;
 };
 
 export const updateStrengthBars = (strengthValue) => {
-    console.log(strengthValue);
     const strengthIndex = Math.max(0, Math.min(4, strengthValue));
     const strength = passwordStrength[strengthIndex];
-    console.log(strength);
 
     strengthConfigValue.textContent = strength.text;
 

@@ -1,4 +1,5 @@
-import { checkboxOptions, copyButton, lengthValue, passwordText } from "./constants";
+import { checkboxOptions, lengthValue, passwordText } from "./constants";
+import { enableCopyButton } from "./dom-events";
 
 const generatePassword = () => {
     const charsets = [
@@ -10,6 +11,7 @@ const generatePassword = () => {
     let guaranteedChars = "";
     const selectedCharsets = [];
 
+    // Getting a character from each charset
     checkboxOptions.forEach((input, index) => {
         if (input.checked) {
             const charset = charsets[index];
@@ -24,10 +26,12 @@ const generatePassword = () => {
     const remainingLength = lengthValue - guaranteedChars.length;
     let password = guaranteedChars;
 
+    // filling the remaining length with random characters
     for (let i = 0; i < remainingLength; i++) {
         password += combinedCharset[Math.floor(Math.random() * combinedCharset.length)];
     }
 
+    // shuffling the characters
     password = password.split("").sort(() => Math.random() - 0.5).join("");
     return password;
 };
@@ -36,5 +40,5 @@ export const handlePasswordGeneration = () => {
     const password = generatePassword();
     passwordText.textContent = password;
     passwordText.style.opacity = "1";
-    copyButton.disabled = false;
+    enableCopyButton();
 };
