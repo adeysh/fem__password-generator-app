@@ -1,6 +1,7 @@
 @use '../abstracts' as a;
 
 body {
+    position: relative;
     font-family: var(--ff-primary);
     background: var(--gradient-cinder);
     color: white;
